@@ -20,6 +20,7 @@ body {
     display: table-cell;
     text-align: center;
     vertical-align: middle;
+    padding: 0 10px;
 }
 
 .text-vertical-center h1 {
@@ -247,4 +248,51 @@ footer {
   position: fixed;
   bottom: 5px;
   right: 5px;
+}
+
+#id-photo img {
+    width: 200px;
+    display: inline;
+}
+
+.progress-circle {
+    margin: 10px auto;
+}
+
+.progress-circle span {
+    padding: 15px 0;
+    color: #337ab7;
+}
+
+.value-bar {
+    border-color: lightgreen;
+}
+
+.progress-circle.over50 .first50-bar {
+    background-color: lightgreen;
+}
+
+/* Mobile Layout */
+
+
+/*Tablet view styles*/
+@media only screen and (max-width: 992px){
+
+  
+}
+
+/*Mobile view styles*/
+@media only screen and (max-width: 768px){
+
+
+.text-vertical-center h1 {
+    font-size: 2em;
+}
+
+
+.text-vertical-center h3 {
+    font-size: 1.3em;
+}
+
+
 }
