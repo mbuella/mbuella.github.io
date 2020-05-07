@@ -1,0 +1,17 @@
+name: Deploy To Azure Blob Storage
+on:
+  push:
+    tags:        
+      - mbuella-v1.*
+jobs:
+  upload:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: bacongobbler/azure-blob-storage-upload@v1.1.1
+        with:
+          source_dir: .
+          container_name: $web
+          connection_string: ${{ secrets.portfolioConnectionString }}
+          extra_args: '--exclude-pattern LICENSE;README.md;.git/*;.github/*'
+          
